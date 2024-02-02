@@ -4180,7 +4180,7 @@ export const home = `
       ${background}
       <rect x="0" y="0" width="100%" height="100%" fill="black" opacity="0.6" />
       <text x="50%" y="40%" text-anchor="middle" font-size="100" fill="white">Welcome to the mental arithmetic!</text>
-      <text x="50%" y="55%" text-anchor="middle" font-size="100" fill="white">If you are ready, push I'm ready button.</text>
+      <text x="50%" y="55%" text-anchor="middle" font-size="100" fill="white">Tap I'm ready to start.</text>
     </svg>
   `
 
@@ -4196,8 +4196,7 @@ export const waitingAnswer = `
     <svg xmlns="http://www.w3.org/2000/svg" width="1910" height="1000" viewBox="0,0,1910,1000">
       ${background}
       <rect x="0" y="0" width="100%" height="100%" fill="black" opacity="0.6" />
-      <text x="50%" y="40%" text-anchor="middle" font-size="100" fill="white">Tap button to answer!</text>
-      <text x="50%" y="55%" text-anchor="middle" font-size="100" fill="white">You can get NFT.</text>
+      <text x="50%" y="50%" text-anchor="middle" font-size="100" fill="white">Tap button to answer!</text>
     </svg>
   `
 
@@ -4205,7 +4204,7 @@ export const congrats = `
     <svg xmlns="http://www.w3.org/2000/svg" width="1910" height="1000" viewBox="0,0,1910,1000">
       ${background2}
       <text x="50%" y="35%" text-anchor="middle" font-size="100" fill="#323232">Congraturation!</text>
-      <text x="50%" y="50%" text-anchor="middle" font-size="100" fill="#323232">You are got graduation NFT!</text>
+      <text x="50%" y="50%" text-anchor="middle" font-size="100" fill="#323232">You got graduation NFT!</text>
       <text x="50%" y="70%" text-anchor="middle" font-size="100" fill="#323232">Please check your wallet.</text>
     </svg>
   `

@@ -1,11 +1,8 @@
-// api with next.js
-
 import { NextApiRequest, NextApiResponse } from 'next'
 import GIFEncoder from 'gifencoder'
 import sharp from 'sharp'
 import { Image, createCanvas } from 'canvas'
 import { home } from '../assets/messageSvg'
-import fs from 'fs'
 
 export default async (req: NextApiRequest, res: NextApiResponse) => {
   if (req.method !== 'GET') return res.status(404).end()
@@ -38,9 +35,6 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
       ctx.clearRect(0, 0, 1910, 1000)
       ctx.drawImage(img, 0, 0)
       encoder.addFrame(ctx as any)
-
-      // save img with fs
-      fs.writeFileSync('test.png', canvas.toBuffer('image/png'))
     }
     img.src = await sharp(Buffer.from(svg)).png().toBuffer()
   }
