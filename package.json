@@ -9,14 +9,25 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@chakra-ui/react": "^2.8.2",
+    "@coinbase/onchainkit": "^0.4.1",
+    "@emotion/react": "^11.11.3",
+    "@emotion/styled": "^11.11.0",
+    "@neynar/nodejs-sdk": "^1.9.3",
+    "canvas": "^2.11.2",
+    "framer-motion": "^11.0.3",
+    "gifencoder": "^2.0.1",
+    "next": "14.1.0",
     "react": "^18",
     "react-dom": "^18",
-    "next": "14.1.0"
+    "sharp": "0.32.6",
+    "svg2img": "^0.9.4"
   },
   "devDependencies": {
-    "typescript": "^5",
+    "@types/gifencoder": "^2.0.3",
     "@types/node": "^20",
     "@types/react": "^18",
-    "@types/react-dom": "^18"
+    "@types/react-dom": "^18",
+    "typescript": "^5"
   }
 }
