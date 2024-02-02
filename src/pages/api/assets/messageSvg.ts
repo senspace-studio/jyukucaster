@@ -4188,8 +4188,8 @@ export const home = `
       ${font}
       ${background}
       <rect x="0" y="0" width="100%" height="100%" fill="black" opacity="0.6" />
-      <text x="50%" y="40%" text-anchor="middle" font-size="100" fill="white">Welcome to the mental arithmetic!</text>
-      <text x="50%" y="55%" text-anchor="middle" font-size="100" fill="white">Tap I'm ready to start.</text>
+      <text style="font-family: 'Roboto';" x="50%" y="40%" text-anchor="middle" font-size="100" fill="white">Welcome to the mental arithmetic!</text>
+      <text style="font-family: 'Roboto';" x="50%" y="55%" text-anchor="middle" font-size="100" fill="white">Tap I'm ready to start.</text>
     </svg>
   `
 
@@ -4197,8 +4197,8 @@ export const checkReady = `
     <svg xmlns="http://www.w3.org/2000/svg" width="1910" height="1000" viewBox="0,0,1910,1000">
       ${font}
       ${background}
-      <rect x="0" y="0" width="100%" height="100%" fill="black" opacity="0.6" />
-      <text x="50%" y="50%" text-anchor="middle" font-size="100" fill="white">Are you ready?</text>
+      <rect style="font-family: 'Roboto';" x="0" y="0" width="100%" height="100%" fill="black" opacity="0.6" />
+      <text style="font-family: 'Roboto';" x="50%" y="50%" text-anchor="middle" font-size="100" fill="white">Are you ready?</text>
     </svg>
   `
 
@@ -4206,8 +4206,8 @@ export const waitingAnswer = `
     <svg xmlns="http://www.w3.org/2000/svg" width="1910" height="1000" viewBox="0,0,1910,1000">
       ${font}
       ${background}
-      <rect x="0" y="0" width="100%" height="100%" fill="black" opacity="0.6" />
-      <text x="50%" y="50%" text-anchor="middle" font-size="100" fill="white">Tap button to answer!</text>
+      <rect style="font-family: 'Roboto';" x="0" y="0" width="100%" height="100%" fill="black" opacity="0.6" />
+      <text style="font-family: 'Roboto';" x="50%" y="50%" text-anchor="middle" font-size="100" fill="white">Tap button to answer!</text>
     </svg>
   `
 
@@ -4215,9 +4215,9 @@ export const congrats = `
     <svg xmlns="http://www.w3.org/2000/svg" width="1910" height="1000" viewBox="0,0,1910,1000">
       ${font}
       ${background2}
-      <text x="50%" y="35%" text-anchor="middle" font-size="100" fill="#323232">Congraturation!</text>
-      <text x="50%" y="50%" text-anchor="middle" font-size="100" fill="#323232">You got graduation NFT!</text>
-      <text x="50%" y="70%" text-anchor="middle" font-size="100" fill="#323232">Please check your wallet.</text>
+      <text style="font-family: 'Roboto';" x="50%" y="35%" text-anchor="middle" font-size="100" fill="#323232">Congraturation!</text>
+      <text style="font-family: 'Roboto';" x="50%" y="50%" text-anchor="middle" font-size="100" fill="#323232">You got graduation NFT!</text>
+      <text style="font-family: 'Roboto';" x="50%" y="70%" text-anchor="middle" font-size="100" fill="#323232">Please check your wallet.</text>
     </svg>
   `
 
@@ -4225,8 +4225,8 @@ export const incorrect = `
     <svg xmlns="http://www.w3.org/2000/svg" width="1910" height="1000" viewBox="0,0,1910,1000">
       ${font}
       ${background3}
-      <rect x="0" y="0" width="100%" height="100%" fill="black" opacity="0.3" />
-      <text x="50%" y="40%" text-anchor="middle" font-size="100" fill="white">Incorrect...</text>
-      <text x="50%" y="55%" text-anchor="middle" font-size="100" fill="white">Let's try again with reload!</text>
+      <rect style="font-family: 'Roboto';" x="0" y="0" width="100%" height="100%" fill="black" opacity="0.3" />
+      <text style="font-family: 'Roboto';" x="50%" y="40%" text-anchor="middle" font-size="100" fill="white">Incorrect...</text>
+      <text style="font-family: 'Roboto';" x="50%" y="55%" text-anchor="middle" font-size="100" fill="white">Let's try again with reload!</text>
     </svg>
   `
