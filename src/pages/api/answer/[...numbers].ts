@@ -18,7 +18,7 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
     const numbers = numbersArrayString.split(',')
     const sum = numbers?.reduce((acc, cur) => acc + Number(cur), 0)
     const buttons = buttonsArrayString?.split(',')
-    const tappedAnswer = buttons?.[tappedButtonIndex]
+    const tappedAnswer = buttons?.[tappedButtonIndex - 1]
 
     if (tappedAnswer === sum?.toString()) {
       res.redirect(307, `${process.env.NEXT_PUBLIC_SITE_URL}/answer/correct`)

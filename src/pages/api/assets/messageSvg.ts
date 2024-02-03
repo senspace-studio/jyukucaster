@@ -4203,8 +4203,9 @@ export const waitingAnswer = `
 export const congrats = `
     <svg xmlns="http://www.w3.org/2000/svg" width="1910" height="1000" viewBox="0,0,1910,1000">
       ${background2}
+      <rect style="font-family: 'Roboto';" x="0" y="0" width="100%" height="100%" fill="white" opacity="0.4" />
       <text style="font-family: 'Roboto';" x="50%" y="35%" text-anchor="middle" font-size="100" fill="#323232">Congraturation!</text>
-      <text style="font-family: 'Roboto';" x="50%" y="50%" text-anchor="middle" font-size="100" fill="#323232">You got graduation NFT!</text>
+      <text style="font-family: 'Roboto';" x="50%" y="50%" text-anchor="middle" font-size="100" fill="#323232">You got a graduation NFT!</text>
       <text style="font-family: 'Roboto';" x="50%" y="70%" text-anchor="middle" font-size="100" fill="#323232">Please check your wallet.</text>
     </svg>
   `
