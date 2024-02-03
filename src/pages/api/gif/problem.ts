@@ -5,6 +5,10 @@ import GIFEncoder from 'gifencoder'
 import sharp from 'sharp'
 import { Image, createCanvas } from 'canvas'
 import { background, checkReady, waitingAnswer } from '../assets/messageSvg'
+import path from 'path'
+
+path.resolve(process.cwd(), 'fonts', 'fonts.conf')
+path.resolve(process.cwd(), 'fonts', 'Roboto-Medium.ttf')
 
 export default async (req: NextApiRequest, res: NextApiResponse) => {
   if (req.method !== 'GET') return res.status(404).end()
