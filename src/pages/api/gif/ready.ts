@@ -8,6 +8,10 @@ import path from 'path'
 path.resolve(process.cwd(), 'fonts', 'fonts.conf')
 path.resolve(process.cwd(), 'fonts', 'Roboto-Medium.ttf')
 
+export const config = {
+  maxDuration: 60,
+}
+
 export default async (req: NextApiRequest, res: NextApiResponse) => {
   if (req.method !== 'GET') return res.status(404).end()
 
