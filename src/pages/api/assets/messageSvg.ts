@@ -4175,17 +4175,8 @@ const background3 = `
 <path d="m1053 674.38c1.045-0.22955 2.3973-0.4328 2.5685 1.0264 0.14221 1.213-0.93482 1.41-2.2286 1.5635-0.34485-0.72754-0.34448-1.4724-0.33984-2.5898z" fill="#384758"/>
 `
 
-const font = `
-<defs>
-  <style type="text/css">
-    @import url('https://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic');
- </style>
-</defs>
-`
-
 export const home = `
     <svg xmlns="http://www.w3.org/2000/svg" width="1910" height="1000" viewBox="0,0,1910,1000">
-      ${font}
       ${background}
       <rect x="0" y="0" width="100%" height="100%" fill="black" opacity="0.6" />
       <text style="font-family: 'Roboto';" x="50%" y="40%" text-anchor="middle" font-size="100" fill="white">Welcome to the mental arithmetic!</text>
@@ -4195,7 +4186,6 @@ export const home = `
 
 export const checkReady = `
     <svg xmlns="http://www.w3.org/2000/svg" width="1910" height="1000" viewBox="0,0,1910,1000">
-      ${font}
       ${background}
       <rect style="font-family: 'Roboto';" x="0" y="0" width="100%" height="100%" fill="black" opacity="0.6" />
       <text style="font-family: 'Roboto';" x="50%" y="50%" text-anchor="middle" font-size="100" fill="white">Are you ready?</text>
@@ -4204,7 +4194,6 @@ export const checkReady = `
 
 export const waitingAnswer = `
     <svg xmlns="http://www.w3.org/2000/svg" width="1910" height="1000" viewBox="0,0,1910,1000">
-      ${font}
       ${background}
       <rect style="font-family: 'Roboto';" x="0" y="0" width="100%" height="100%" fill="black" opacity="0.6" />
       <text style="font-family: 'Roboto';" x="50%" y="50%" text-anchor="middle" font-size="100" fill="white">Tap button to answer!</text>
@@ -4213,7 +4202,6 @@ export const waitingAnswer = `
 
 export const congrats = `
     <svg xmlns="http://www.w3.org/2000/svg" width="1910" height="1000" viewBox="0,0,1910,1000">
-      ${font}
       ${background2}
       <text style="font-family: 'Roboto';" x="50%" y="35%" text-anchor="middle" font-size="100" fill="#323232">Congraturation!</text>
       <text style="font-family: 'Roboto';" x="50%" y="50%" text-anchor="middle" font-size="100" fill="#323232">You got graduation NFT!</text>
@@ -4223,7 +4211,6 @@ export const congrats = `
 
 export const incorrect = `
     <svg xmlns="http://www.w3.org/2000/svg" width="1910" height="1000" viewBox="0,0,1910,1000">
-      ${font}
       ${background3}
       <rect style="font-family: 'Roboto';" x="0" y="0" width="100%" height="100%" fill="black" opacity="0.3" />
       <text style="font-family: 'Roboto';" x="50%" y="40%" text-anchor="middle" font-size="100" fill="white">Incorrect...</text>
