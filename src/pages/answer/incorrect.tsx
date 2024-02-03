@@ -9,9 +9,7 @@ const AnswerCorrect: NextPage = () => {
         <meta property="fc:frame" content="vNext" />
         <meta
           property="fc:frame:image"
-          content={`${
-            process.env.NEXT_PUBLIC_SITE_URL
-          }/api/gif/incorrect?${new Date().getTime()}`}
+          content={`${process.env.NEXT_PUBLIC_SITE_URL}/api/gif/incorrect`}
         />
       </Head>
     </>
