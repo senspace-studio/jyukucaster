@@ -2,7 +2,7 @@
 const nextConfig = {
   reactStrictMode: true,
   functions: {
-    'src/api/**/*': {
+    'src/pages/api/**/*': {
       maxDuration: 300,
     },
   },
