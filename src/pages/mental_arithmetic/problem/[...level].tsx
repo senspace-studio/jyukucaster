@@ -9,11 +9,11 @@ type Props = {
 
 // server side props
 export const getServerSideProps: GetServerSideProps = async (ctx) => {
-  const level = ctx.query.level
+  const level = ctx.query.level?.toString() || 'elementaryschool'
 
   let countOfNumbers = 4
   switch (level) {
-    case 'highschool':
+    case 'college':
       countOfNumbers = 6
       break
     case 'mecha':
@@ -42,7 +42,7 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
 
   const sums = [
     correctSum.toString(),
-    fakeSums
+    ...fakeSums
       .sort(() => Math.random() - 0.5)
       .map((v) => v.toString())
       .slice(0, 3),

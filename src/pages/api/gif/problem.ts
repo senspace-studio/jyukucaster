@@ -22,12 +22,12 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
   if (
     !numbers ||
     !level ||
-    !['elementaryschool', 'highschool', 'mecha'].includes(level)
+    !['elementaryschool', 'college', 'mecha'].includes(level)
   )
     return res.status(400).end()
 
   const speedOfDelay =
-    level === 'elementaryschool' ? 1500 : level === 'highscool' ? 1200 : 750
+    level === 'elementaryschool' ? 1500 : level === 'college' ? 1200 : 750
   const waitingReadySvgs = new Array(Math.floor(3000 / speedOfDelay)).fill(
     checkReady
   )
