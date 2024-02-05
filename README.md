@@ -1,6 +1,6 @@
 ![Logo](/docs/logo.png)
 
-# An Farcaster Frame Experimental: JYUKUCASTER
+# An Farcaster Frame Experiment: JYUKUCASTER
 
 This repository is an experiment in Farcaster's implementation of Frames, a feature that allows developers to create mini-applications on social network (warpcast) timelines, and we created Jyukucaster, a mini-game of quiz.
 
