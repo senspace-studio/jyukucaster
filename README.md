@@ -17,6 +17,8 @@ All actions are performed within FarcasterFrames.
 3. Solve the problem and send the answer.
 4. If the answer correctly, you will receive an NFT.
 
+https://github.com/senspace-studio/jyukucaster/assets/18475563/e4561193-c75d-445b-99a0-e148ecdeb0e2
+
 ## Frameworks
 
 - Next.js for frontend and api function
