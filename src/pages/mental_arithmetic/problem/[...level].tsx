@@ -63,7 +63,7 @@ const Problem: NextPage<Props> = (props) => {
   return (
     <>
       <Head>
-        <title>Problem</title>
+        <title>Jyukucaster | Mental Arithmetic</title>
         <meta property="fc:frame" content="vNext" />
         <meta property="fc:frame:image" content={props.image} />
         <meta property="fc:frame:button:1" content={props.buttons[0]} />
