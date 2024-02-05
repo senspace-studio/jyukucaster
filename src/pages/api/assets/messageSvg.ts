@@ -4213,7 +4213,7 @@ export const congrats = `
       ${background2}
       <rect style="font-family: 'Roboto';" x="0" y="0" width="100%" height="100%" fill="white" opacity="0.4" />
       <text style="font-family: 'Roboto';" x="50%" y="30%" text-anchor="middle" font-size="110" fill="#323232">Correct!</text>
-      <text style="font-family: 'Roboto';" x="50%" y="45%" text-anchor="middle" font-size="80" fill="#323232">You’ve graduated college!</text>
+      <text style="font-family: 'Roboto';" x="50%" y="45%" text-anchor="middle" font-size="80" fill="#323232">You are Hero of the Mental Math Universe!</text>
       <text style="font-family: 'Roboto';" x="50%" y="70%" text-anchor="middle" font-size="80" fill="#323232">Check your wallet for</text>
       <text style="font-family: 'Roboto';" x="50%" y="80%" text-anchor="middle" font-size="80" fill="#323232">a photo NFT of your graduation!</text>
     </svg>
