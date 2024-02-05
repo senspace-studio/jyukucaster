@@ -29,7 +29,7 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
       try {
         await contract.claimTo(claim.address, claim.token_id, 1)
         await pgClient.query(
-          `UPDATE claims SET minted = true WHERE address = ${claim.address} AND token_id = ${claim.token_id} AND minted = ${claim.minted}`
+          `UPDATE claims SET minted = true WHERE address = '${claim.address}' AND token_id = ${claim.token_id} AND minted = ${claim.minted}`
         )
       } catch (error) {
         console.log(error)
