@@ -30,7 +30,7 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
     const tappedAnswer = buttons?.[tappedButtonIndex - 1]
 
     const numbersLen = numbers.length
-    let level = 'elementaryshool'
+    let level = 'elementaryschool'
     switch (numbersLen) {
       case 6:
         level = 'highschool'
