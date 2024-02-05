@@ -17,10 +17,20 @@ export const config = {
 export default async (req: NextApiRequest, res: NextApiResponse) => {
   if (req.method !== 'GET') return res.status(404).end()
 
-  // generate svg image. width: 1910, height: 1000
-  const waitingReadySvgs = new Array(3).fill(checkReady)
   const numbers = req.query.numbers?.toString().split(',')
-  if (!numbers) return res.status(400).end()
+  const level = req.query.level?.toString()
+  if (
+    !numbers ||
+    !level ||
+    !['elementaryschool', 'highschool', 'mecha'].includes(level)
+  )
+    return res.status(400).end()
+
+  const speedOfDelay =
+    level === 'elementaryschool' ? 1500 : level === 'highscool' ? 1200 : 750
+  const waitingReadySvgs = new Array(Math.floor(3000 / speedOfDelay)).fill(
+    checkReady
+  )
 
   const problemSvgs = numbers.map((number) => {
     return `
@@ -51,7 +61,7 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
 
   encoder.start()
   encoder.setRepeat(-1)
-  encoder.setDelay(1500)
+  encoder.setDelay(speedOfDelay)
   encoder.setQuality(10)
 
   for (const svg of combinedSvgs) {

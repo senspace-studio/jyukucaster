@@ -4179,8 +4179,9 @@ export const home = `
     <svg xmlns="http://www.w3.org/2000/svg" width="1910" height="1000" viewBox="0,0,1910,1000">
       ${background}
       <rect x="0" y="0" width="100%" height="100%" fill="black" opacity="0.6" />
-      <text style="font-family: 'Roboto';" x="50%" y="40%" text-anchor="middle" font-size="100" fill="white">Welcome to the mental arithmetic!</text>
-      <text style="font-family: 'Roboto';" x="50%" y="55%" text-anchor="middle" font-size="100" fill="white">Tap I'm ready to start.</text>
+      <text style="font-family: 'Roboto';" x="50%" y="30%" text-anchor="middle" font-size="80" fill="white">Welcome to Jyukucaster,</text>
+      <text style="font-family: 'Roboto';" x="50%" y="45%" text-anchor="middle" font-size="80" fill="white">the premier cram school on Farcaster!</text>
+      <text style="font-family: 'Roboto';" x="50%" y="70%" text-anchor="middle" font-size="80" fill="white">Tap I’m ready when you’re ready for class!</text>
     </svg>
   `
 
@@ -4204,9 +4205,10 @@ export const congrats = `
     <svg xmlns="http://www.w3.org/2000/svg" width="1910" height="1000" viewBox="0,0,1910,1000">
       ${background2}
       <rect style="font-family: 'Roboto';" x="0" y="0" width="100%" height="100%" fill="white" opacity="0.4" />
-      <text style="font-family: 'Roboto';" x="50%" y="35%" text-anchor="middle" font-size="100" fill="#323232">Congraturation!</text>
-      <text style="font-family: 'Roboto';" x="50%" y="50%" text-anchor="middle" font-size="100" fill="#323232">You got a graduation NFT!</text>
-      <text style="font-family: 'Roboto';" x="50%" y="70%" text-anchor="middle" font-size="100" fill="#323232">Please check your wallet.</text>
+      <text style="font-family: 'Roboto';" x="50%" y="30%" text-anchor="middle" font-size="110" fill="#323232">Correct!</text>
+      <text style="font-family: 'Roboto';" x="50%" y="45%" text-anchor="middle" font-size="80" fill="#323232">You are now a genius mecha warrior!</text>
+      <text style="font-family: 'Roboto';" x="50%" y="70%" text-anchor="middle" font-size="80" fill="#323232">Check your wallet for</text>
+      <text style="font-family: 'Roboto';" x="50%" y="80%" text-anchor="middle" font-size="80" fill="#323232">a photo NFT of your graduation!</text>
     </svg>
   `
 
@@ -4214,7 +4216,7 @@ export const incorrect = `
     <svg xmlns="http://www.w3.org/2000/svg" width="1910" height="1000" viewBox="0,0,1910,1000">
       ${background3}
       <rect style="font-family: 'Roboto';" x="0" y="0" width="100%" height="100%" fill="black" opacity="0.3" />
-      <text style="font-family: 'Roboto';" x="50%" y="40%" text-anchor="middle" font-size="100" fill="white">Incorrect...</text>
-      <text style="font-family: 'Roboto';" x="50%" y="55%" text-anchor="middle" font-size="100" fill="white">Let's try again with reload!</text>
+      <text style="font-family: 'Roboto';" x="50%" y="40%" text-anchor="middle" font-size="100" fill="white">Bu-bu! Wrong!</text>
+      <text style="font-family: 'Roboto';" x="50%" y="55%" text-anchor="middle" font-size="100" fill="white">Retake your test below!</text>
     </svg>
   `

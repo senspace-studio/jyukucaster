@@ -1,4 +1,4 @@
-import { NextPage } from 'next'
+import { GetServerSideProps, NextPage } from 'next'
 import Head from 'next/head'
 
 type Props = {
@@ -8,29 +8,51 @@ type Props = {
 }
 
 // server side props
-export async function getServerSideProps() {
-  const numbers = Array.from({ length: 4 }, () =>
+export const getServerSideProps: GetServerSideProps = async (ctx) => {
+  const level = ctx.query.level
+
+  let countOfNumbers = 4
+  switch (level) {
+    case 'highschool':
+      countOfNumbers = 6
+      break
+    case 'mecha':
+      countOfNumbers = 10
+      break
+    default:
+      break
+  }
+  const rawNumbers = Array.from({ length: countOfNumbers * 5 }, () =>
     Math.floor(Math.random() * 30)
   )
+  const numbers = rawNumbers
+    .filter((value, index, self) => {
+      return self.indexOf(value) === index
+    })
+    .slice(0, countOfNumbers)
 
   const correctSum = numbers.reduce((a, b) => a + b, 0)
-  const fakeSum1 = correctSum + Math.floor(Math.random() * 100)
-  const fakeSum2 = correctSum + Math.floor(Math.random() * 10)
-  const fakeSum3 = correctSum + Math.floor(Math.random() * 10)
+  const fakeSums = [
+    correctSum + 10,
+    correctSum + Math.floor(Math.random() * 100),
+    correctSum + Math.floor(Math.random() * 15),
+    correctSum - Math.floor(Math.random() * 15),
+    Math.floor(Math.random() * 30),
+  ]
 
   const sums = [
     correctSum.toString(),
-    fakeSum1.toString(),
-    fakeSum2.toString(),
-    fakeSum3.toString(),
-  ]
-  sums.sort(() => Math.random() - 0.5)
+    fakeSums
+      .sort(() => Math.random() - 0.5)
+      .map((v) => v.toString())
+      .slice(0, 3),
+  ].sort(() => Math.random() - 0.5)
 
   return {
     props: {
       image: `${
         process.env.NEXT_PUBLIC_SITE_URL
-      }/api/gif/problem?numbers=${numbers.join(',')}`,
+      }/api/gif/problem?numbers=${numbers.join(',')}&level=${level}`,
       numbers: numbers,
       buttons: sums,
     },
@@ -41,7 +63,7 @@ const Problem: NextPage<Props> = (props) => {
   return (
     <>
       <Head>
-        <title>Home</title>
+        <title>Problem</title>
         <meta property="fc:frame" content="vNext" />
         <meta property="fc:frame:image" content={props.image} />
         <meta property="fc:frame:button:1" content={props.buttons[0]} />

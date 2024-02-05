@@ -1,40 +1,29 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+![Logo](/docs/logo.png)
 
-## Getting Started
+# An Farcaster Frame Experimental: JYUKUCASTER
 
-First, run the development server:
+This repository is an experiment in Farcaster's implementation of Frames, a feature that allows developers to create mini-applications on social network (warpcast) timelines, and we created Jyukucaster, a mini-game of quiz.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Currently, Mental Arithmetic problems are available.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+\*This is experimental implementation. Use this for your own risk.
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+## How it works
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+All actions are performed within FarcasterFrames.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+1. Recast the cast.
+2. Start with the I'm Ready button.
+3. Solve the problem and send the answer.
+4. If the answer correctly, you will receive an NFT.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Frameworks
 
-## Learn More
+- Next.js for frontend and api function
+- Thirdweb for managing nft
+- Neynar for interaction with farcast
 
-To learn more about Next.js, take a look at the following resources:
+## Technique
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+1. Implement an api function that returns a gif image as the image (fc:frame:image) loaded in the Farcaster Frames. Dynamically generate questions so that the user can play over and over again.
+2. Data integration with Farcaster using Neynar.
