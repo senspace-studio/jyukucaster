@@ -1,10 +1,14 @@
 import type { NextApiRequest, NextApiResponse } from 'next'
 import { neynarClient } from '../lib/neynar'
 import { thirdwebSDK } from '../lib/thirdweb'
+import ContractABI from './ContractABI.json'
 
 const mintNFT = async (address: string, tokenId: number) => {
   const contract = (
-    await thirdwebSDK.getContract(process.env.NFT_CONTRACT_ADDRESS!)
+    await thirdwebSDK.getContract(
+      process.env.NFT_CONTRACT_ADDRESS!,
+      ContractABI
+    )
   ).erc1155
   contract.claimTo(address, tokenId, 1)
   return
