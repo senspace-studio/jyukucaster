@@ -1,6 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next'
 import { neynarClient } from '../lib/neynar'
-import { mintNFT } from '../lib/thirdweb'
 
 export default async (req: NextApiRequest, res: NextApiResponse) => {
   if (req.method !== 'POST') return res.status(404).end()
@@ -37,7 +36,17 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
       const walletAddress = decodedData?.action?.interactor?.verifications[0]
       if (walletAddress) {
         const tokenId = numbersLen === 10 ? 2 : numbersLen === 6 ? 1 : 0
-        mintNFT(walletAddress, tokenId)
+        fetch(`${process.env.NEXT_PUBLIC_SITE_URL}/api/mint`, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            address: walletAddress,
+            tokenId,
+            secret: process.env.MINT_SECRET_PHRASE,
+          }),
+        })
       }
       res.redirect(
         307,
