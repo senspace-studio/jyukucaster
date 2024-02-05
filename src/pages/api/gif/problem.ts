@@ -34,10 +34,10 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
 
   const problemSvgs = numbers.map((number) => {
     return `
-      <svg xmlns="http://www.w3.org/2000/svg" width="1910" height="1000" viewBox="0,0,1910,1000">
+      <svg xmlns="http://www.w3.org/2000/svg" width="955" height="500" viewBox="0,0,955,500">
         ${background}
         <rect x="0" y="0" width="100%" height="100%" fill="black" opacity="0.9" />
-        <text x="50%" y="50%" text-anchor="middle" font-size="200" fill="white">${number}</text>
+        <text x="50%" y="50%" text-anchor="middle" font-size="100" fill="white">${number}</text>
       </svg>
     `
   })
@@ -45,8 +45,8 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
 
   const combinedSvgs = [...waitingReadySvgs, ...problemSvgs, ...finishedSvgs]
 
-  const encoder = new GIFEncoder(1910, 1000)
-  const canvas = createCanvas(1910, 1000)
+  const encoder = new GIFEncoder(955, 500)
+  const canvas = createCanvas(955, 500)
   const ctx = canvas.getContext('2d')
 
   // GIFエンコーダーのストリームを設定
@@ -67,7 +67,7 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
   for (const svg of combinedSvgs) {
     const img = new Image()
     img.onload = () => {
-      ctx.clearRect(0, 0, 1910, 1000)
+      ctx.clearRect(0, 0, 955, 500)
       ctx.drawImage(img, 0, 0)
       encoder.addFrame(ctx as any)
     }
