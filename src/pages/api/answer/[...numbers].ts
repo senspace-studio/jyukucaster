@@ -41,7 +41,7 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
         break
     }
 
-    const walletAddress = decodedData?.action?.cast?.author.verifications[0]
+    const walletAddress = decodedData?.action?.interactor?.verifications[0]
     if (walletAddress) {
       const tokenId = numbersLen === 10 ? 2 : numbersLen === 6 ? 1 : 0
       await mintNFT(walletAddress, tokenId)
@@ -53,7 +53,10 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
         `${process.env.NEXT_PUBLIC_SITE_URL}/answer/correct/${level}`
       )
     } else {
-      res.redirect(307, `${process.env.NEXT_PUBLIC_SITE_URL}/answer/incorrect`)
+      res.redirect(
+        307,
+        `${process.env.NEXT_PUBLIC_SITE_URL}/answer/incorrect/${level}`
+      )
     }
   } catch (error) {
     console.error(error)
