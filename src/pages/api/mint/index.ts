@@ -1,6 +1,8 @@
 import { ThirdwebSDK } from '@thirdweb-dev/sdk'
 import ContractABI from './ContractABI.json'
 import { NextApiRequest, NextApiResponse } from 'next'
+import { Client } from 'pg'
+import { pgClient } from '../lib/pg'
 
 const thirdwebSDK = ThirdwebSDK.fromPrivateKey(
   process.env.MINTWALLET_PK!,
@@ -11,11 +13,10 @@ const thirdwebSDK = ThirdwebSDK.fromPrivateKey(
 )
 
 export default async (req: NextApiRequest, res: NextApiResponse) => {
-  const { address, tokenId, secret } = req.body
-
-  if (req.method !== 'POST' || !address || !tokenId || !secret)
-    return res.status(404).end()
-  if (secret !== process.env.MINT_SECRET_PHRASE) return res.status(403).end()
+  await pgClient.connect()
+  const claims = await pgClient.query(
+    `SELECT * FROM claims WHERE minted = false`
+  )
 
   const contract = (
     await thirdwebSDK.getContract(
@@ -23,7 +24,15 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
       ContractABI
     )
   ).erc1155
-  await contract.claimTo(address, tokenId, 1)
 
-  res.status(200).end()
+  const promises = claims.rows.map(async (claim) => {
+    await contract.claimTo(claim.address, claim.token_id, 1)
+    await pgClient.query(
+      `UPDATE claims SET minted = true WHERE id = ${claim.id}`
+    )
+  })
+
+  await Promise.all(promises)
+
+  return
 }
