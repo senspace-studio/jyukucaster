@@ -9,7 +9,7 @@ type Props = {
 
 // server side props
 export const getServerSideProps: GetServerSideProps = async (ctx) => {
-  const level = ctx.query.level
+  const level = ctx.query.level?.toString() || 'elementaryschool'
 
   let countOfNumbers = 4
   switch (level) {
