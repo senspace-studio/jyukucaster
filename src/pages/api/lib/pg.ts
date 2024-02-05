@@ -6,3 +6,10 @@ export const pgClient = new Client({
     rejectUnauthorized: false,
   },
 })
+
+export const pgConnect = async () => {
+  try {
+    await pgClient.connect()
+  } catch (_) {}
+  return pgClient
+}

@@ -1,7 +1,7 @@
 import { ThirdwebSDK } from '@thirdweb-dev/sdk'
 import ContractABI from './ContractABI.json'
 import { NextApiRequest, NextApiResponse } from 'next'
-import { pgClient } from '../lib/pg'
+import { pgConnect } from '../lib/pg'
 
 const thirdwebSDK = ThirdwebSDK.fromPrivateKey(
   process.env.MINTWALLET_PK!,
@@ -13,7 +13,7 @@ const thirdwebSDK = ThirdwebSDK.fromPrivateKey(
 
 export default async (req: NextApiRequest, res: NextApiResponse) => {
   try {
-    await pgClient.connect()
+    const pgClient = await pgConnect()
     const claims = await pgClient.query(
       `SELECT * FROM claims WHERE minted = false`
     )
