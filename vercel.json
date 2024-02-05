@@ -2,7 +2,7 @@
   "crons": [
     {
       "path": "/api/mint",
-      "schedule": "*/1 * * * * *"
+      "schedule": "*/1 * * * *"
     }
   ]
 }
