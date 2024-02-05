@@ -15,7 +15,7 @@ All actions are performed within FarcasterFrames.
 1. Recast the cast.
 2. Start with the I'm Ready button.
 3. Solve the problem and send the answer.
-4. If the answer correctly, you will receive an NFT.
+4. If the answer is correct, you will receive an NFT.
 
 ## Frameworks
 

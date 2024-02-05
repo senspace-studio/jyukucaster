@@ -20,7 +20,7 @@ const AnswerCorrect: NextPage<Props> = ({ level }) => {
   return (
     <>
       <Head>
-        <title>Incorrect</title>
+        <title>Jyukucaster | InCorrect</title>
         <meta property="fc:frame" content="vNext" />
         <meta
           property="fc:frame:image"

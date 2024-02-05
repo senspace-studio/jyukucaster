@@ -1,3 +1,4 @@
+import { About } from '@/components/about'
 import { Container, Heading } from '@chakra-ui/react'
 import { GetServerSideProps, NextPage } from 'next'
 import Head from 'next/head'
@@ -21,7 +22,7 @@ const Home: NextPage<Props> = ({ level }) => {
   return (
     <>
       <Head>
-        <title>Home</title>
+        <title>Jyukucaster | Mental Arithmetic</title>
         <meta property="fc:frame" content="vNext" />
         <meta
           property="fc:frame:image"
@@ -36,9 +37,7 @@ const Home: NextPage<Props> = ({ level }) => {
         />
       </Head>
 
-      <Container>
-        <Heading textAlign="center">What is mental arithmetic?</Heading>
-      </Container>
+      <About />
     </>
   )
 }
